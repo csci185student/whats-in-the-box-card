@@ -1,13 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" ref="styles.css">
-<link rel="js slides" ref="slides.js">
-<Title>What's in the Runnerbox?</Title>
+<link rel="stylesheet" href="styles.css">
+
+<!-- google font import -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+<Title>What's in the Box?</Title>
 </head>
 <body>
-<h1>What's in the Runnerbox?</h1>
+<h1>What's in the Box?</h1>
 
+<div class="banner">
+15% OFF = RUNNERBOX15
+</div>
+
+<!-- modal -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- modal container -->
+<img id="myImg" src="https://www.therunnerbox.com/wp-content/uploads/2023/01/HotShot.jpg" alt="Product Name" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
 
 <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -15,25 +144,29 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
-      <img src="https://www.therunnerbox.com/wp-content/uploads/2023/01/HotShot.jpg" style="width:20%">
-      <div class="text">Caption Text</div>
+      <div id="parent"><img src="https://www.therunnerbox.com/wp-content/uploads/2023/01/HotShot.jpg" style="width:30%" alt="Image of HotShot"></div>
+      <div class="text">Product Name</div>
+    </div>
+
+    <div class="popup" onclick="myFunction()">Click me!
+      <span class="popuptext" id="myPopup">Popup text...</span>
     </div>
   
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
-      <img src="https://cdn.shopify.com/s/files/1/0044/9341/0393/products/HOTSHOT_nutrition_label_450x450.jpg?v=1620072704" style="width:20%">
-      <div class="text">Caption Two</div>
+      <img src="https://cdn.shopify.com/s/files/1/0044/9341/0393/products/HOTSHOT_nutrition_label_450x450.jpg?v=1620072704" style="width:30%" alt="Nutrition Label">
+      <div class="text">Nutrition information</div>
     </div>
   
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img src="https://cdn.shopify.com/s/files/1/1255/6365/files/HOTSHOT-homepage-howitworks-drink.jpg?v=1646148740" style="width:20%">
-      <div class="text">Caption Three</div>
+      <img src="https://cdn.shopify.com/s/files/1/1255/6365/files/HOTSHOT-homepage-howitworks-drink.jpg?v=1646148740" style="width:30%" alt="Image of person drinking HotShot">
+      <div class="text">How We Use It</div>
     </div>
     
     <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div style="text-align:center" class="absolute"><a class="next" onclick="plusSlides(-1)">&#10094;</a></div>
+    <div style="text-align:center" class="absolute"><a class="prev" onclick="plusSlides(1)">&#10095;</a></div>
   </div>
   <br>
   
@@ -43,11 +176,49 @@
     <span class="dot" onclick="currentSlide(2)"></span> 
     <span class="dot" onclick="currentSlide(3)"></span> 
   </div>
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+
+
+  <script>
+    {/* // When the user clicks on <div>, open the popup */}
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
+
 
 </body>
-
-
-
 
 
 </html>

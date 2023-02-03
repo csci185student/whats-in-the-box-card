@@ -1,4 +1,32 @@
-* {box-sizing:border-box}
+* 
+/* @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); */
+
+body {
+  margin: 0% 0% 10% 0%;
+}
+
+h1 {
+  background-color:#38cccc;
+  padding: .7em;
+  text-align:center;
+  font-family: 'Parisienne';
+  font-size: 40pt;
+  font-weight: bold;
+  color:white;
+}
+
+/* promo code */
+.banner {
+  margin: 10% 40% 10% 40%;
+  padding: 1em;
+  background-color:#e8f4f4;
+  text-align:center;
+  color: #2d2d35;
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+/* {box-sizing:border-box} */
 
 /* Slideshow container */
 .slideshow-container {
@@ -8,9 +36,9 @@
 }
 
 /* Hide the images by default */
-.mySlides {
-  display: none;
-}
+/* .mySlides {
+  display:none;
+} */
 
 /* Next & previous buttons */
 .prev, .next {
@@ -28,6 +56,11 @@
   user-select: none;
 }
 
+
+div.absolute {
+  position:absolute;
+}
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
@@ -41,13 +74,14 @@
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color: #444444;
+  font-size: 40px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
+  font-family: Arial;
 }
 
 /* Number text (1/3 etc) */
@@ -81,7 +115,70 @@
   animation-duration: 1.5s;
 }
 
+
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}

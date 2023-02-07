@@ -1,15 +1,20 @@
-* 
-/* @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body {
-  margin: 0% 0% 10% 0%;
+  margin: 0% 10% 10% 10%;
+}
+
+main {
+  display: rid;
 }
 
 h1 {
   background-color:#38cccc;
   padding: .7em;
   text-align:center;
-  font-family: 'Parisienne';
+  font-family: 'Parisienne', cursive;
   font-size: 40pt;
   font-weight: bold;
   color:white;
@@ -133,6 +138,11 @@ h1 {
   background-color: black;
   padding: 2px 16px;
   color: white;
+ 
+}
+
+#caption {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img.demo {
@@ -152,3 +162,39 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* grid css from csci class import */
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 30px;
+  column-gap: 30px;
+  text-align: center;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+main > section {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* #s2 element should span the last 4 columns
+#s2 {
+  grid-column-start: 1; 
+  grid-column-end: 2; stop before this column
+}
+
+#s3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#s4 {
+  grid-column: 1 / 4;
+} */

@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="styles.css">
-<script src="slides.js"></script>
+  <head>
 
-<!-- google font import -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
-<Title>What's in the Box?</Title>
-</head>
-<body>
-<h1>What's in the Box?</h1>
+    <Title>What's in the Box?</Title>
 
-<div class="banner">
-15% OFF = RUNNERBOX15
-</div>
+  </head>
 
-<!-- Images used to open the lightbox -->
-<div class="row">
-  <div class="column">
-    <img src="images/HotShot.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="images/how-to-read-nutrition-label-inline-zz-221213-01-3212fe.webp" onclick="openModal();currentSlide(2)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="images/Lesser-Evil.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="images/Powerball.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-  </div>
-</div>
+  <body>
+
+    <h1>What's in the Box?</h1>
+
+      <div class="banner">
+      15% OFF = RUNNERBOX15
+      </div>
+
+  <!-- Images used to open the lightbox -->
+  <main>
+
+    <section id="s1">Product Name
+      <img src="images/HotShot.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s2">Product Name
+      <img src="images/Lesser-Evil.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s3">Product Name
+          <img src="images/Powerball.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s4">Product Name
+      <img src="images/Carboom.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s5"> Product Name
+      <img src="images/Cherubundi.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s6"> Product Name
+      <img src="images/Rule-Breaker.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s7"> Product Name
+      <img src="images/Tosi.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s8"> Product Name
+      <img src="images/Drip-Drop.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s9"> Product Name 
+      <img src="images/HotShot.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+    <section id="s10"> Product Name
+      <img src="images/Veo-Stripe.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+    </section>
+
+  </main>
 
 <!-- The Modal/Lightbox -->
 <div id="myModal" class="modal">
@@ -41,22 +68,22 @@
 
     <div class="mySlides">
       <div class="numbertext">1 / 4</div>
-      <img src="images/HotShot.jpg" style="width:10%">
+      <img src="images/HotShot.jpg" style="width:50%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      <img src="images/how-to-read-nutrition-label-inline-zz-221213-01-3212fe.webp" style="width:10%">
+      <img src="images/nfl-howtounderstand-honey_200x.png" width="20%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
-      <img src="images/Lesser-Evil.jpg" style="width:10%">
+      <img src="images/runnerbox2_1200_1080x.webp" style="width:50%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      <img src="images/Powerball.jpg" style="width:10%">
+      <iframe width="424" height="238" src="https://www.youtube.com/embed/Z-W_wwAmUNM" title="Our Story - Drink LMNT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
     <!-- Next/previous controls -->
@@ -70,29 +97,25 @@
 
     <!-- Thumbnail image controls -->
     <div class="column">
-      <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+      <img class="demo" src="images/HotShot.jpg" onclick="currentSlide(1)" alt="Product Name" width="20%">
     </div>
 
     <div class="column">
-      <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+      <img class="demo" src="images/nfl-howtounderstand-honey.png" onclick="currentSlide(2)" alt="Nutrition Information" width="20%">
     </div>
 
     <div class="column">
-      <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+      <img class="demo" src="images/runnerbox2_1200_1080x.webp" onclick="currentSlide(3)" alt="Product Being Used Image" width="20%">
     </div>
 
     <div class="column">
-      <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+      <img class="demo" src="images/Powerball.jpg" onclick="currentSlide(4)" alt="Product Being Used Video" width="20%">
     </div>
   </div>
 </div>
 
-
-
-
-
+<script src="slides.js"></script>
 
 </body>
-
 
 </html>

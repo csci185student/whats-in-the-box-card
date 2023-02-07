@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Parisienne&display=swap');
 
 body {
   margin: 0% 10% 10% 10%;
@@ -22,13 +22,17 @@ h1 {
 
 /* promo code */
 .banner {
-  margin: 10% 40% 10% 40%;
-  padding: 1em;
+  top: 100px;
+  right: 400px;
+  left: 400px;
+  bottom: 550px;
+  padding: .5em;
   background-color:#e8f4f4;
-  text-align:center;
+  text-align: center;
   color: #2d2d35;
-  font-family: "Arial";
+  font-family: Lato;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .row > .column {
@@ -69,6 +73,50 @@ h1 {
   padding: 0;
   width: 90%;
   max-width: 1200px;
+}
+
+.desc {
+  display:flex;
+  position:fixed;
+  right:200px;
+  top:200px;
+  left: 800px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #2d2d35;
+}
+
+h3 {
+  display: flex;
+  position: fixed;
+  right:200px;
+  top:400px;
+  left: 800px;
+  font-family: 'Parisienne', cursive;
+  font-size: 35px;
+  color: #38cccc;
+}
+
+.use {
+  display:flex;
+  position:fixed;
+  right:200px;
+  top:450px;
+  left: 800px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #2d2d35;
+}
+
+.price {
+  display:flex;
+  position:fixed;
+  top:600px;
+  left: 1000px;
+  font-family: Lato;
+  font-weight:bold;
+  font-size: 25px;
+  color: #38cccc;
 }
 
 /* The Close Button */
@@ -176,6 +224,7 @@ main {
   text-align: center;
   font-family: Arial;
   font-weight: bold;
+  color: #2d2d35;
 }
 
 main > section {
